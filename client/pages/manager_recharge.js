@@ -28,12 +28,12 @@ class MangereCharge extends React.Component{
         );
     }
     cleanClick(){
+        this.props.form.setFieldsValue({
+            inputValue:0
+        });
         this.setState(
             {money:0}
         );
-        this.props.form.setFieldsValue({
-            inputValue:this.state.money
-        });
     }
     render(){
         const { getFieldDecorator } = this.props.form;
